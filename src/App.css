@@ -1,38 +1,147 @@
-.App {
-  text-align: center;
+/* Reset CSS untuk memastikan konsistensi */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Styling body dan layout utama */
+body {
+  background-color: #f4f7fc;
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  margin: 0;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Styling untuk container utama */
+.app-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+/* Login dan Register Container */
+.login-container, .register-container {
+  background: #fff;
+  width: 100%;
+  max-width: 380px;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+  margin-top: 20px;
+}
+
+/* Hover effect untuk container */
+.login-container:hover, .register-container:hover {
+  transform: translateY(-10px);
+}
+
+/* Form Header */
+h2 {
+  text-align: center;
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+/* Input Group */
+.input-group {
+  margin-bottom: 20px;
+}
+
+.input-group label {
+  font-size: 14px;
+  color: #333;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  color: #333;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.input-group input:focus {
+  border-color: #5f27cd;
+  box-shadow: 0 0 5px rgba(95, 39, 205, 0.3);
+}
+
+/* Button */
+button {
+  width: 100%;
+  padding: 14px;
+  font-size: 16px;
   color: white;
+  background-color: #5f27cd;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-.App-link {
-  color: #61dafb;
+button:hover {
+  background-color: #8e44ad;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+button:active {
+  transform: scale(0.98);
+}
+
+/* Link untuk pendaftaran dan navigasi */
+.register-link, .login-link {
+  display: block;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.register-link a, .login-link a {
+  font-size: 14px;
+  color: #5f27cd;
+  text-decoration: none;
+}
+
+.register-link a:hover, .login-link a:hover {
+  text-decoration: underline;
+}
+
+/* Pesan Error dan Sukses */
+.error-message, .success-message {
+  text-align: center;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.error-message {
+  color: red;
+}
+
+.success-message {
+  color: green;
+}
+
+/* Responsif untuk perangkat mobile */
+@media screen and (max-width: 768px) {
+  .login-container, .register-container {
+    padding: 30px;
+    max-width: 320px;
   }
-  to {
-    transform: rotate(360deg);
+
+  h2 {
+    font-size: 24px;
   }
 }
