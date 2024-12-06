@@ -1,7 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css'; // Mengimpor CSS
-
 import Login from './components/Login';
 import Register from './components/Register';
 import Favorites from './components/Favorites'; // Pastikan ada halaman Favorit

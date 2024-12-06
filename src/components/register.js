@@ -21,7 +21,7 @@ const Register = () => {
 
     // Kirim permintaan register ke API backend
     try {
-      const response = await fetch("http://127.0.0.1:8000/api/register", {
+      const response = await fetch("http://127.0.0.1:8000/routes/api/register", {
         method: "POST",
         headers: {
           "Content-Type": "application/json", // Mengatur header agar backend tahu jenis konten
